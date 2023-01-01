@@ -2,7 +2,6 @@
 #define MONITOR_LABS_MONITOR_H
 
 #include <dispatch/dispatch.h>
-#include <iostream>
 
 class Semaphore {
 private:

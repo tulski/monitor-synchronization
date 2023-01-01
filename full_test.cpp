@@ -18,11 +18,7 @@ int main() {
 
             std::move(std::thread(Producer, 31, 800, 15, std::ref(glass_buffer))),
             std::move(std::thread(Producer, 32, 800, 25, std::ref(glass_buffer))),
-            std::move(std::thread(Subscriber, 32, 800, std::ref(glass_buffer))),
-
-            std::move(std::thread(Producer, 41, 800, 30, std::ref(pedal_buffer))),
-            std::move(std::thread(Producer, 42, 800, 55, std::ref(pedal_buffer))),
-            std::move(std::thread(Subscriber, 43, 800, std::ref(pedal_buffer))),
+            std::move(std::thread(Subscriber, 32, 800, std::ref(glass_buffer)))
     };
 
     for (auto &thread: threads) {
